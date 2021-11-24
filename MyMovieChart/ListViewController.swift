@@ -40,10 +40,10 @@ class ListViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //행에 맞는 데이터소스 읽어옴
+        //행에 맞는 데이터소스 읽어옴ㅇ
         let row = self.list[indexPath.row]
         
-        // 재사용 큐를 가져옴
+        // 재사용 큐를 가져옴d
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell")!
         
         let title = cell.viewWithTag(101) as? UILabel
