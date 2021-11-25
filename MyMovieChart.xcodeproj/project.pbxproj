@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		47D4DEBA274CA2C3001CED6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4DEB9274CA2C3001CED6B /* AppDelegate.swift */; };
 		47D4DEBC274CA2C3001CED6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4DEBB274CA2C3001CED6B /* SceneDelegate.swift */; };
-		47D4DEBE274CA2C3001CED6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4DEBD274CA2C3001CED6B /* ViewController.swift */; };
 		47D4DEC1274CA2C3001CED6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D4DEBF274CA2C3001CED6B /* Main.storyboard */; };
 		47D4DEC3274CA2C4001CED6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D4DEC2274CA2C4001CED6B /* Assets.xcassets */; };
 		47D4DEC6274CA2C4001CED6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D4DEC4274CA2C4001CED6B /* LaunchScreen.storyboard */; };
@@ -17,6 +16,10 @@
 		47D4DEDC274CA2C4001CED6B /* MyMovieChartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4DEDB274CA2C4001CED6B /* MyMovieChartUITests.swift */; };
 		47D4DEED274CD994001CED6B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4DEEC274CD994001CED6B /* ListViewController.swift */; };
 		47D4DEF2274CDBF5001CED6B /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4DEF1274CDBF5001CED6B /* MovieVO.swift */; };
+		47D4DEFF274E3D6F001CED6B /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4DEFE274E3D6F001CED6B /* MovieCell.swift */; };
+		47D4DF13274E47DF001CED6B /* darknight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47D4DF10274E47DF001CED6B /* darknight.jpg */; };
+		47D4DF14274E47DF001CED6B /* rain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47D4DF11274E47DF001CED6B /* rain.jpg */; };
+		47D4DF15274E47DF001CED6B /* secret.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47D4DF12274E47DF001CED6B /* secret.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,6 @@
 		47D4DEB6274CA2C3001CED6B /* MyMovieChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D4DEB9274CA2C3001CED6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D4DEBB274CA2C3001CED6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47D4DEBD274CA2C3001CED6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47D4DEC0274CA2C3001CED6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47D4DEC2274CA2C4001CED6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47D4DEC5274CA2C4001CED6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +55,10 @@
 		47D4DEDD274CA2C4001CED6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47D4DEEC274CD994001CED6B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		47D4DEF1274CDBF5001CED6B /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
+		47D4DEFE274E3D6F001CED6B /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		47D4DF10274E47DF001CED6B /* darknight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = darknight.jpg; sourceTree = "<group>"; };
+		47D4DF11274E47DF001CED6B /* rain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rain.jpg; sourceTree = "<group>"; };
+		47D4DF12274E47DF001CED6B /* secret.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = secret.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +109,13 @@
 		47D4DEB8274CA2C3001CED6B /* MyMovieChart */ = {
 			isa = PBXGroup;
 			children = (
+				47D4DF03274E42AA001CED6B /* Resources */,
 				47D4DEB9274CA2C3001CED6B /* AppDelegate.swift */,
 				47D4DEBB274CA2C3001CED6B /* SceneDelegate.swift */,
-				47D4DEBD274CA2C3001CED6B /* ViewController.swift */,
 				47D4DEBF274CA2C3001CED6B /* Main.storyboard */,
 				47D4DEEC274CD994001CED6B /* ListViewController.swift */,
 				47D4DEF1274CDBF5001CED6B /* MovieVO.swift */,
+				47D4DEFE274E3D6F001CED6B /* MovieCell.swift */,
 				47D4DEC2274CA2C4001CED6B /* Assets.xcassets */,
 				47D4DEC4274CA2C4001CED6B /* LaunchScreen.storyboard */,
 				47D4DEC7274CA2C4001CED6B /* Info.plist */,
@@ -132,6 +139,16 @@
 				47D4DEDD274CA2C4001CED6B /* Info.plist */,
 			);
 			path = MyMovieChartUITests;
+			sourceTree = "<group>";
+		};
+		47D4DF03274E42AA001CED6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47D4DF10274E47DF001CED6B /* darknight.jpg */,
+				47D4DF11274E47DF001CED6B /* rain.jpg */,
+				47D4DF12274E47DF001CED6B /* secret.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +254,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D4DF13274E47DF001CED6B /* darknight.jpg in Resources */,
+				47D4DF15274E47DF001CED6B /* secret.jpg in Resources */,
+				47D4DF14274E47DF001CED6B /* rain.jpg in Resources */,
 				47D4DEC6274CA2C4001CED6B /* LaunchScreen.storyboard in Resources */,
 				47D4DEC3274CA2C4001CED6B /* Assets.xcassets in Resources */,
 				47D4DEC1274CA2C3001CED6B /* Main.storyboard in Resources */,
@@ -264,8 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47D4DEBE274CA2C3001CED6B /* ViewController.swift in Sources */,
 				47D4DEBA274CA2C3001CED6B /* AppDelegate.swift in Sources */,
+				47D4DEFF274E3D6F001CED6B /* MovieCell.swift in Sources */,
 				47D4DEED274CD994001CED6B /* ListViewController.swift in Sources */,
 				47D4DEBC274CA2C3001CED6B /* SceneDelegate.swift in Sources */,
 				47D4DEF2274CDBF5001CED6B /* MovieVO.swift in Sources */,
