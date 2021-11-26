@@ -40,6 +40,16 @@ class ListViewController : UITableViewController {
 
     // 뷰컨트롤러가 초기화 되면서 뷰가 '메모리에 로딩'(인스턴스) 될 때 호출되는 메소드. 처음 한번만 실행되는 로직을 구현
     override func viewDidLoad(){
+        // 1 호핀 api 호출을 위한 URI 생성
+        let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=1&count=10&genreId=&order=releasedateasc"
+        let apiURI : URL!  = URL(string: url)
+        
+        // ② REST API를 호출
+        let apidata = try! Data(contentsOf: apiURI)
+        
+        // ③ 데이터 전송 결과를 로그로 출력 (반드시 필요한 코드는 아님)
+        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""
+        NSLog("API Result=\( log )")
 
     }
     
