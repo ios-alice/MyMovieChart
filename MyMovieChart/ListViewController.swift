@@ -42,9 +42,12 @@ class ListViewController : UITableViewController {
     override func viewDidLoad(){
         // 1 호핀 api 호출을 위한 URI 생성
         let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=1&count=10&genreId=&order=releasedateasc"
-        let apiURI : URL!  = URL(string: url)
         
-        // ② REST API를 호출
+        // 주소를 파운데이션 프레임워크에 정의된 URL 객체를 써서 문자열 주소 -> URL 타입으로 만듬
+        let apiURI : URL! = URL(string: url)
+        
+        // 1. Data(contentsOf:) : REST API를 호출 (네트워크 주소를 URL 타입으로 넣어줘야햠)
+        // try?
         let apidata = try! Data(contentsOf: apiURI)
         
         // ③ 데이터 전송 결과를 로그로 출력 (반드시 필요한 코드는 아님)
