@@ -2,7 +2,7 @@ import UIKit
 
 class ListViewController : UITableViewController {
     
-    // 4. 튜플로 데이터 세트 : 데이터 단순나열, 묶음
+    // 4. 튜플로 데이터 세트 : 데이터 단순나열, 묶음 z
     var dataset = [
         ("다크나이트", "영웅물에 철학에 음악까지 더해져 예술이되다.","2008-09-04", 8.95, "darknight.jpg"),
         ("호우시절", "때를 알고 내리는 좋은 비", "2008-10-22", 7.31, "rain.jpg"),
