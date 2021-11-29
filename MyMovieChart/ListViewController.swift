@@ -1,13 +1,7 @@
 import UIKit
+import Foundation
 
 class ListViewController : UITableViewController {
-    
-    // 4. 튜플로 데이터 세트 : 데이터 단순나열, 묶음 z
-    var dataset = [
-        ("다크나이트", "영웅물에 철학에 음악까지 더해져 예술이되다.","2008-09-04", 8.95, "darknight.jpg"),
-        ("호우시절", "때를 알고 내리는 좋은 비", "2008-10-22", 7.31, "rain.jpg"),
-        ("말할 수 없는 비밀", "여기서 너 까지 다섯걸음", "2003-14-34", 3.33, "secret.jpg")
-    ]
     
     // 테이블 뷰를 구성할 리스트 데이터
     // lazy : 클래스의 인스턴스 생성 시 초기화 아닌, 프로퍼티를 호출 해야만 초기화.
@@ -17,20 +11,7 @@ class ListViewController : UITableViewController {
         //MovieVO타입의 배열로 초기화
         // 초기값을 모아 초기값 배열 객체 만듬
         var datalist = [MovieVO]()
-        
-        //for - in 구문 : in을 반복하여 for에 대입한다.
-        for (title, desc, opendate, rating, thumbnail) in self.dataset {
-            
-            //MocieVO의 인스턴스 생성 = 초기값대입
-            let mvo = MovieVO()
-            mvo.title = title
-            mvo.description = desc
-            mvo.opendate = opendate
-            mvo.rating = rating
-            mvo.thumbnail = thumbnail
-            
-            datalist.append(mvo)
-        }
+
         return datalist
         // 연산의 초기값을 받고싶으니 클로저구문을 사용하여받음 = return으로 초기값받음
         // 변수의 초기값은 datalist
@@ -47,12 +28,38 @@ class ListViewController : UITableViewController {
         let apiURI : URL! = URL(string: url)
         
         // 1. Data(contentsOf:) : REST API를 호출 (네트워크 주소를 URL 타입으로 넣어줘야햠)
-        // try?
+        // try! : 오류를 던지도록 만든 메소드이지만 , 필요에 의해 오류를 던지지 않게 하고 싶을 때
         let apidata = try! Data(contentsOf: apiURI)
         
         // ③ 데이터 전송 결과를 로그로 출력 (반드시 필요한 코드는 아님)
         let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""
         NSLog("API Result=\( log )")
+        
+        do {
+            // 테이블을 구성하는 데이터로 사용하기 위해NSDictionary 객체로 캐스팅
+            let apiDictionay = try JSONSerialization.jsonObject(with: apidata, options: []) as! NSDictionary
+            
+            let hoppin = apiDictionay["hoppin"] as! NSDictionary
+            let movies = hoppin["movies"] as! NSDictionary
+            let movie = movies["movie"] as! NSArray
+            
+
+            for row in movie {
+                
+                let r = row as! NSDictionary
+                
+                let mvo = MovieVO()
+                
+                mvo.title = r["title"] as? String
+                mvo.description = r["genreNames"] as? String
+                mvo.thumbnail = r["thumbnailImage"] as? String
+                mvo.detail = r["linkUrl"] as? String
+                mvo.rating = ((r["ratingAverage"] as! NSString).doubleValue)
+                
+                self.list.append(mvo)
+            }
+            
+        }catch {}
 
     }
     
@@ -74,9 +81,12 @@ class ListViewController : UITableViewController {
         cell.opendate?.text = row.opendate
         cell.rating?.text = "\(row.rating!)"
         
-        //이미지뷰 처리
-        cell.thumbnail.image = UIImage(named: row.thumbnail!)
+        let url: URL! = URL(string: row.thumbnail!)
         
+        let imageData = try! Data(contentsOf: url)
+        
+        cell.thumbnail.image = UIImage(data:imageData)
+  
         return cell
     }
     
