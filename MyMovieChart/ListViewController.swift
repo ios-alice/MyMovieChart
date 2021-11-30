@@ -24,7 +24,7 @@ class ListViewController : UITableViewController {
         // 1 호핀 api 호출을 위한 URI 생성
         let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=1&count=10&genreId=&order=releasedateasc"
         
-        // 주소를 파운데이션 프레임워크에 정의된 URL 객체를 써서 문자열 주소 -> URL 타입으로 만듬
+        // 주소를 파운데이션 프레임워크에 정의된 URL 객체(구조체)를 써서 문자열 주소 -> URL 타입으로 만듬
         let apiURI : URL! = URL(string: url)
         
         // 1. Data(contentsOf:) : REST API를 호출 (네트워크 주소를 URL 타입으로 넣어줘야햠)
@@ -43,7 +43,7 @@ class ListViewController : UITableViewController {
             let movies = hoppin["movies"] as! NSDictionary
             let movie = movies["movie"] as! NSArray
             
-
+            
             for row in movie {
                 
                 let r = row as! NSDictionary
@@ -60,7 +60,7 @@ class ListViewController : UITableViewController {
             }
             
         }catch {}
-
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,7 +86,10 @@ class ListViewController : UITableViewController {
         let imageData = try! Data(contentsOf: url)
         
         cell.thumbnail.image = UIImage(data:imageData)
-  
+        
+        //이미지뷰 처리
+        cell.thumbnail.image = UIImage(named: try! Data(contentsOf: URL(string:row.thumbnail!)!))
+        
         return cell
     }
     
