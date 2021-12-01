@@ -36,7 +36,7 @@ class ListViewController : UITableViewController {
         NSLog("API Result=\( log )")
         
         do {
-            // 테이블을 구성하는 데이터로 사용하기 위해NSDictionary 객체로 캐스팅
+            // 테이블을 구성하는 데이터로 사용하기 위해NSDictionary 객체로 캐스팅 ㅊstfitnkef
             let apiDictionay = try JSONSerialization.jsonObject(with: apidata, options: []) as! NSDictionary
             
             let hoppin = apiDictionay["hoppin"] as! NSDictionary
