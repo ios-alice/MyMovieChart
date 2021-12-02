@@ -36,14 +36,15 @@ class ListViewController : UITableViewController {
         NSLog("API Result=\( log )")
         
         do {
-            // 테이블을 구성하는 데이터로 사용하기 위해NSDictionary 객체로 캐스팅 ㅊstfitnkef
+            // 테이블을 구성하는 데이터로 사용하기 위해NSDictionary 객체로 캐스팅
+            // jsonObject 메서드는 예외처리하도록 설계됨 -> do~try~catch
             let apiDictionay = try JSONSerialization.jsonObject(with: apidata, options: []) as! NSDictionary
             
             let hoppin = apiDictionay["hoppin"] as! NSDictionary
             let movies = hoppin["movies"] as! NSDictionary
             let movie = movies["movie"] as! NSArray
             
-            
+            // 배열은 for in 구문으로 읽어들임
             for row in movie {
                 
                 let r = row as! NSDictionary
@@ -86,9 +87,6 @@ class ListViewController : UITableViewController {
         let imageData = try! Data(contentsOf: url)
         
         cell.thumbnail.image = UIImage(data:imageData)
-        
-        //이미지뷰 처리
-        cell.thumbnail.image = UIImage(named: try! Data(contentsOf: URL(string:row.thumbnail!)!))
         
         return cell
     }
