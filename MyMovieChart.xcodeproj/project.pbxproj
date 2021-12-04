@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		476BC4A6275B3A7000F1E9A3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BC4A5275B3A7000F1E9A3 /* DetailViewController.swift */; };
 		47D4DEBA274CA2C3001CED6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4DEB9274CA2C3001CED6B /* AppDelegate.swift */; };
 		47D4DEBC274CA2C3001CED6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4DEBB274CA2C3001CED6B /* SceneDelegate.swift */; };
 		47D4DEC1274CA2C3001CED6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D4DEBF274CA2C3001CED6B /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		476BC4A5275B3A7000F1E9A3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		47D4DEB6274CA2C3001CED6B /* MyMovieChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D4DEB9274CA2C3001CED6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D4DEBB274CA2C3001CED6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				47D4DEB9274CA2C3001CED6B /* AppDelegate.swift */,
 				47D4DEBB274CA2C3001CED6B /* SceneDelegate.swift */,
 				47D4DEBF274CA2C3001CED6B /* Main.storyboard */,
+				476BC4A5275B3A7000F1E9A3 /* DetailViewController.swift */,
 				47D4DEEC274CD994001CED6B /* ListViewController.swift */,
 				47D4DEF1274CDBF5001CED6B /* MovieVO.swift */,
 				47D4DEFE274E3D6F001CED6B /* MovieCell.swift */,
@@ -287,6 +290,7 @@
 				47D4DEBA274CA2C3001CED6B /* AppDelegate.swift in Sources */,
 				47D4DEFF274E3D6F001CED6B /* MovieCell.swift in Sources */,
 				47D4DEED274CD994001CED6B /* ListViewController.swift in Sources */,
+				476BC4A6275B3A7000F1E9A3 /* DetailViewController.swift in Sources */,
 				47D4DEBC274CA2C3001CED6B /* SceneDelegate.swift in Sources */,
 				47D4DEF2274CDBF5001CED6B /* MovieVO.swift in Sources */,
 			);
