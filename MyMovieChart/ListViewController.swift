@@ -98,7 +98,7 @@ class ListViewController : UITableViewController {
     
 }
 
-// 화면 전환 시 값을 넘겨주기 위한 세그웨이 관련 처리
+// 화면 전환 시 값을 넘겨주기 위한 세그웨이 관련 처리 
 extension ListViewController {
     //prepare(for:sender:) 세그웨이에 대한 전처리 메소드 / 세그웨이가 실행되기 직전에 = 화면전환 직전에 내부 메소드가 먼저 실행됨
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
