@@ -15,7 +15,7 @@ class DetailViewController : UIViewController {
     override func viewDidLoad() {
         
         // 프로토콜은 그에 맞는 델리게이트 객체 지정용 멤버변수를 가진다.
-        // 이 클래스에 델리게이트 메소드를 구현할테니 웹뷰에 변화가 있을 떄 맞는 메소드를 호출해주세요
+        // 이 클래스에 델리게이트 메소드를 구현할테니 웹뷰에 변화가 있을 떄 맞는 메소드를 호출해주세요.
         self.wv.navigationDelegate = self
     
         NSLog("linkurl = \(self.mvo.detail!), title = \(self.mvo.title!)")
