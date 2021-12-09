@@ -27,11 +27,12 @@ class ListViewController : UITableViewController {
         // 주소를 파운데이션 프레임워크에 정의된 URL 객체(구조체)를 써서 문자열 주소 -> URL 타입으로 만듬
         let apiURI : URL! = URL(string: url)
         
+        
         // 1. Data(contentsOf:) : REST API를 호출 (네트워크 주소를 URL 타입으로 넣어줘야햠)
         // try! : 오류를 던지도록 만든 메소드이지만 , 필요에 의해 오류를 던지지 않게 하고 싶을 때
         let apidata = try! Data(contentsOf: apiURI)
          
-        // ③ 데이터 전송 결과를 로그로 출력 (반드시 필요한 코드는 아님)
+        // 3. 데이터 전송 결과를 로그로 출력 (반드시 필요한 코드는 아님)
         let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""
         NSLog("API Result=\( log )")
         
