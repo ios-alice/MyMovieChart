@@ -32,7 +32,7 @@ class ListViewController : UITableViewController {
         // try! : 오류를 던지도록 만든 메소드이지만 , 필요에 의해 오류를 던지지 않게 하고 싶을 때
         let apidata = try! Data(contentsOf: apiURI)
          
-        // 3. 데이터 전송 결과를 로그로 출력 (반드시 필요한 코드는 아님)
+        // 3. 데이터 전송 결과를 로그로 출력 (반드시 필요한 코드는 아님) 
         let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""
         NSLog("API Result=\( log )")
         
