@@ -7,6 +7,6 @@ class TheaterCell : UITableViewCell {
     //연락처
     @IBOutlet weak var tel: UILabel!
     
-    //주소
+    //주소 
     @IBOutlet weak var addr: UILabel!
 }
