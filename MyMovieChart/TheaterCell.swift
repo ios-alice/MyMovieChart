@@ -9,4 +9,5 @@ class TheaterCell : UITableViewCell {
     
     //주소 
     @IBOutlet weak var addr: UILabel!
+
 }

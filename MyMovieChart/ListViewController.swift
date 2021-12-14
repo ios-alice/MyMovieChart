@@ -24,7 +24,7 @@ class ListViewController : UITableViewController {
         // 1 호핀 api 호출을 위한 URI 생성
         let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=1&count=10&genreId=&order=releasedateasc"
         
-        // 주소를 파운데이션 프레임워크에 정의된 URL 객체(구조체)를 써서 문자열 주소 -> URL 타입으로 만듬
+        // URL : 파운데이션 프레임워크에 정의된 URL객체(구조체) / 문자열 주소 -> URL 타입으로 만듬
         let apiURI : URL! = URL(string: url)
         
         
@@ -78,7 +78,7 @@ class ListViewController : UITableViewController {
         // 재사용 큐를 가져옴
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! MovieCell
         
-
+        
         cell.title?.text = row.title
         cell.desc?.text = row.description
         cell.opendate?.text = row.opendate

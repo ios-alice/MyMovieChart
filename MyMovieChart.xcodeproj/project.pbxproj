@@ -24,6 +24,7 @@
 		47FB4D4D276784D000C48396 /* Trailer.png in Resources */ = {isa = PBXBuildFile; fileRef = 47FB4D4B276784D000C48396 /* Trailer.png */; };
 		47FB4D4E276784D000C48396 /* Listbullets.png in Resources */ = {isa = PBXBuildFile; fileRef = 47FB4D4C276784D000C48396 /* Listbullets.png */; };
 		47FB4D532767968900C48396 /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB4D522767968900C48396 /* TheaterCell.swift */; };
+		47FB4D5B27679BDA00C48396 /* TheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB4D5A27679BDA00C48396 /* TheaterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		47FB4D4B276784D000C48396 /* Trailer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trailer.png; sourceTree = "<group>"; };
 		47FB4D4C276784D000C48396 /* Listbullets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Listbullets.png; sourceTree = "<group>"; };
 		47FB4D522767968900C48396 /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
+		47FB4D5A27679BDA00C48396 /* TheaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				47D4DEBB274CA2C3001CED6B /* SceneDelegate.swift */,
 				47D4DEBF274CA2C3001CED6B /* Main.storyboard */,
 				47FB4D522767968900C48396 /* TheaterCell.swift */,
+				47FB4D5A27679BDA00C48396 /* TheaterViewController.swift */,
 				476BC4A5275B3A7000F1E9A3 /* DetailViewController.swift */,
 				47D4DEEC274CD994001CED6B /* ListViewController.swift */,
 				47D4DEF1274CDBF5001CED6B /* MovieVO.swift */,
@@ -300,6 +303,7 @@
 			files = (
 				47D4DEBA274CA2C3001CED6B /* AppDelegate.swift in Sources */,
 				47D4DEFF274E3D6F001CED6B /* MovieCell.swift in Sources */,
+				47FB4D5B27679BDA00C48396 /* TheaterViewController.swift in Sources */,
 				47D4DEED274CD994001CED6B /* ListViewController.swift in Sources */,
 				476BC4A6275B3A7000F1E9A3 /* DetailViewController.swift in Sources */,
 				47D4DEBC274CA2C3001CED6B /* SceneDelegate.swift in Sources */,
