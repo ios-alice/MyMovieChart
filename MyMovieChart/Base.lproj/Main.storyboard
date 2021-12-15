@@ -188,6 +188,7 @@
                                     <outlet property="addr" destination="74T-yQ-yFW" id="zIj-j9-RDJ"/>
                                     <outlet property="name" destination="4Sf-8F-dPL" id="cFO-bY-PhO"/>
                                     <outlet property="tel" destination="jTc-ab-eNU" id="4UB-PN-XT0"/>
+                                    <segue destination="hF4-XR-sP7" kind="show" identifier="segue_map" id="jCR-R1-RKp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -200,6 +201,23 @@
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1776.8115942028987" y="837.22826086956525"/>
+        </scene>
+        <!--Theater View Controller-->
+        <scene sceneID="SUA-ee-CFD">
+            <objects>
+                <viewController id="hF4-XR-sP7" customClass="TheaterViewController" customModule="MyMovieChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="3cn-N7-K82">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                    <navigationItem key="navigationItem" id="qfV-pt-Lgi"/>
+                    <connections>
+                        <outlet property="map" destination="3cn-N7-K82" id="r8G-zc-W5I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xmx-kl-Z9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473.913043478261" y="836.41304347826099"/>
         </scene>
         <!--영화관-->
         <scene sceneID="M8S-eM-AkO">

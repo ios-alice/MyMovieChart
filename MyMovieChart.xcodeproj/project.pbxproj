@@ -24,7 +24,9 @@
 		47FB4D4D276784D000C48396 /* Trailer.png in Resources */ = {isa = PBXBuildFile; fileRef = 47FB4D4B276784D000C48396 /* Trailer.png */; };
 		47FB4D4E276784D000C48396 /* Listbullets.png in Resources */ = {isa = PBXBuildFile; fileRef = 47FB4D4C276784D000C48396 /* Listbullets.png */; };
 		47FB4D532767968900C48396 /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB4D522767968900C48396 /* TheaterCell.swift */; };
-		47FB4D5B27679BDA00C48396 /* TheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB4D5A27679BDA00C48396 /* TheaterViewController.swift */; };
+		47FB4D5B27679BDA00C48396 /* TheaterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB4D5A27679BDA00C48396 /* TheaterListController.swift */; };
+		47FB4D61276A33B600C48396 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47FB4D60276A33B600C48396 /* MapKit.framework */; };
+		47FB4D69276A35AC00C48396 /* TheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB4D68276A35AC00C48396 /* TheaterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +70,9 @@
 		47FB4D4B276784D000C48396 /* Trailer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trailer.png; sourceTree = "<group>"; };
 		47FB4D4C276784D000C48396 /* Listbullets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Listbullets.png; sourceTree = "<group>"; };
 		47FB4D522767968900C48396 /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
-		47FB4D5A27679BDA00C48396 /* TheaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterViewController.swift; sourceTree = "<group>"; };
+		47FB4D5A27679BDA00C48396 /* TheaterListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListController.swift; sourceTree = "<group>"; };
+		47FB4D60276A33B600C48396 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		47FB4D68276A35AC00C48396 /* TheaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47FB4D61276A33B600C48396 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +108,7 @@
 				47D4DECF274CA2C4001CED6B /* MyMovieChartTests */,
 				47D4DEDA274CA2C4001CED6B /* MyMovieChartUITests */,
 				47D4DEB7274CA2C3001CED6B /* Products */,
+				47FB4D5F276A33B600C48396 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,7 +130,8 @@
 				47D4DEBB274CA2C3001CED6B /* SceneDelegate.swift */,
 				47D4DEBF274CA2C3001CED6B /* Main.storyboard */,
 				47FB4D522767968900C48396 /* TheaterCell.swift */,
-				47FB4D5A27679BDA00C48396 /* TheaterViewController.swift */,
+				47FB4D5A27679BDA00C48396 /* TheaterListController.swift */,
+				47FB4D68276A35AC00C48396 /* TheaterViewController.swift */,
 				476BC4A5275B3A7000F1E9A3 /* DetailViewController.swift */,
 				47D4DEEC274CD994001CED6B /* ListViewController.swift */,
 				47D4DEF1274CDBF5001CED6B /* MovieVO.swift */,
@@ -164,6 +171,14 @@
 				47D4DF12274E47DF001CED6B /* secret.jpg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		47FB4D5F276A33B600C48396 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47FB4D60276A33B600C48396 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,10 +318,11 @@
 			files = (
 				47D4DEBA274CA2C3001CED6B /* AppDelegate.swift in Sources */,
 				47D4DEFF274E3D6F001CED6B /* MovieCell.swift in Sources */,
-				47FB4D5B27679BDA00C48396 /* TheaterViewController.swift in Sources */,
+				47FB4D5B27679BDA00C48396 /* TheaterListController.swift in Sources */,
 				47D4DEED274CD994001CED6B /* ListViewController.swift in Sources */,
 				476BC4A6275B3A7000F1E9A3 /* DetailViewController.swift in Sources */,
 				47D4DEBC274CA2C3001CED6B /* SceneDelegate.swift in Sources */,
+				47FB4D69276A35AC00C48396 /* TheaterViewController.swift in Sources */,
 				47FB4D532767968900C48396 /* TheaterCell.swift in Sources */,
 				47D4DEF2274CDBF5001CED6B /* MovieVO.swift in Sources */,
 			);
