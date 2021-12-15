@@ -29,18 +29,19 @@ class TheaterListController : UITableViewController {
         let urlObj = URL(string: "\(requestURI)?s_page=\(self.startPoint)&s_list=\(sList)&type=\(type)")
         
         do {
-            // 영화관목록은 한글까지 문제없이 처리하는 UTF-8과는 달리, EUC-KR로 되어있어서 인코딩이 필요
-            // 5. Rest API 호출 : NSString(contentsOf:encoding:) : 객체를 이용하여 API를호출하고 그 결과값을 인코딩가능하게하고? 문자열로 받아온다.
+            // Point1. Rest API 호출 : NSString(contentsOf:encoding:) : 객체를 이용하여 API를호출하고 그 결과값을 인코딩을 지정한 문자열(EUC-KR=080000522)로 받아온다.
+            // 영화관목록은 한글까지 문제없이 처리하는 UTF-8과는 달리, EUC-KR로 되어있어서 데이터를 읽어올 때 EUC-KR로 지정해서? 인코딩하면서 호출
             let stringdata = try NSString(contentsOf: urlObj!, encoding: 0x80_000_422)
             
-            // 6.문자열로 받은 데이터를 UTF-8로 인코딩처리한 Data로 변환한다.
+            // Point2. Data 객체 생성 ; 문자열로 받은 데이터를 -> UTF-8로 인코딩처리한 Data타입으로 변환한다. (EUC-KR -> UTF-8)
+            // Data 타입은 utf-8 밖에 못받나봄?
             let encdata = stringdata.data(using:String.Encoding.utf8.rawValue)
             
             do {
-                // 7.Data 객체를 파싱하여 NSArray 객체로 변환한다. Json 배열타입임으로 타입캐스팅한다.
+                // Point3. 파싱 : Data 객체를 파싱하여 NSArray 객체로 변환한다. Json 배열타입임으로 타입캐스팅한다.
                 let apiArray = try JSONSerialization.jsonObject(with: encdata!, options: []) as? NSArray
                 
-                // 8.읽어온 데이터르르 순회하며 self.list  배열에 추가한다.
+                // 읽어온 데이터르르 순회하며 self.list  배열에 추가한다.
                 for obj in apiArray! {
                     self.list.append(obj as! NSDictionary)
                 }
